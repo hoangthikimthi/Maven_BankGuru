@@ -1,0 +1,9 @@
+[2023-11-23 16:20:21,859 INFO com.bankguru.register.Register] - Register - 01: Navigate to 'Register' page
+[2023-11-23 16:20:22,207 INFO com.bankguru.register.Register] - Register - 02: Enter Valid Email to Email ID textbox
+[2023-11-23 16:20:22,351 INFO com.bankguru.register.Register] - Register - 03: Click to submit button
+[2023-11-23 16:20:23,287 INFO com.bankguru.register.Register] - Register - 04: Check UserID and Password display and get value 
+[2023-11-23 16:20:23,539 INFO com.bankguru.register.Register] - Login - 01:  Navigate to 'Login' page
+[2023-11-23 16:20:26,369 INFO com.bankguru.register.Register] - Login - 02:  Enter to UserID textbox with value: mngr540242
+[2023-11-23 16:20:26,472 INFO com.bankguru.register.Register] - Login - 03:  Enter to Password textbox with value: samEdad
+[2023-11-23 16:20:26,551 INFO com.bankguru.register.Register] - Login - 04:  Click to Login button
+[2023-11-23 16:20:26,586 INFO com.bankguru.register.Register] - Login - 05:  Verify Manager's Page is displayed

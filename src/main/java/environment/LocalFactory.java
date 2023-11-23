@@ -11,7 +11,7 @@ import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import commons.BrowserNotSupport;
-import commons.GlobalConstant;
+import commons.GlobalConstants;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LocalFactory implements EnvironmentFactory {

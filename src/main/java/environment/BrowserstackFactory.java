@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import commons.GlobalConstant;
+import commons.GlobalConstants;
 
 public class BrowserstackFactory implements EnvironmentFactory {
 	private WebDriver driver;
@@ -31,7 +31,7 @@ public class BrowserstackFactory implements EnvironmentFactory {
 		capability.setCapability("name", "Run on" + osName + "|" + osVersion + "|" + browserName);
 
 		try {
-			driver = new RemoteWebDriver(new URL(GlobalConstant.BROW_STACK_URL), capability);
+			driver = new RemoteWebDriver(new URL(GlobalConstants.BROW_STACK_URL), capability);
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}

@@ -1,0 +1,56 @@
+[2023-11-23 15:25:18,084 INFO com.bankguru.register.Register] - Register - 01: Navigate to 'Register' page
+[2023-11-23 15:27:58,621 INFO com.bankguru.register.Register] - Register - 01: Navigate to 'Register' page
+[2023-11-23 15:27:59,056 INFO com.bankguru.register.Register] - Register - 02: Enter Valid Email to Email ID textbox
+[2023-11-23 15:27:59,326 INFO com.bankguru.register.Register] - Register - 03: Click to submit button
+[2023-11-23 15:28:00,897 INFO com.bankguru.register.Register] - Register - 04: Check UserID and Password display and get value 
+[2023-11-23 15:32:02,227 INFO com.bankguru.register.Register] - Register - 01: Navigate to 'Register' page
+[2023-11-23 15:32:02,661 INFO com.bankguru.register.Register] - Register - 02: Enter Valid Email to Email ID textbox
+[2023-11-23 15:32:02,845 INFO com.bankguru.register.Register] - Register - 03: Click to submit button
+[2023-11-23 15:32:04,432 INFO com.bankguru.register.Register] - Register - 04: Check UserID and Password display and get value 
+[2023-11-23 15:32:04,721 INFO com.bankguru.register.Register] - Login - 01:  Navigate to 'Login' page
+[2023-11-23 15:32:05,176 INFO com.bankguru.register.Register] - Login - 02:  Enter to UserID textbox with value: mngr540230
+[2023-11-23 15:32:57,144 INFO com.bankguru.register.Register] - Register - 01: Navigate to 'Register' page
+[2023-11-23 15:32:57,513 INFO com.bankguru.register.Register] - Register - 02: Enter Valid Email to Email ID textbox
+[2023-11-23 15:32:57,650 INFO com.bankguru.register.Register] - Register - 03: Click to submit button
+[2023-11-23 15:32:59,046 INFO com.bankguru.register.Register] - Register - 04: Check UserID and Password display and get value 
+[2023-11-23 15:32:59,310 INFO com.bankguru.register.Register] - Login - 01:  Navigate to 'Login' page
+[2023-11-23 15:32:59,711 INFO com.bankguru.register.Register] - Login - 02:  Enter to UserID textbox with value: mngr540231
+[2023-11-23 15:38:28,239 INFO com.bankguru.register.Register] - Register - 01: Navigate to 'Register' page
+[2023-11-23 15:38:29,991 INFO com.bankguru.register.Register] - Register - 02: Enter Valid Email to Email ID textbox
+[2023-11-23 15:38:30,071 INFO com.bankguru.register.Register] - Login - 01:  Navigate to 'Login' page
+[2023-11-23 15:39:32,944 INFO com.bankguru.register.Register] - Register - 01: Navigate to 'Register' page
+[2023-11-23 15:39:35,111 INFO com.bankguru.register.Register] - Register - 02: Enter Valid Email to Email ID textbox
+[2023-11-23 15:39:35,208 INFO com.bankguru.register.Register] - Login - 01:  Navigate to 'Login' page
+[2023-11-23 15:42:49,077 INFO com.bankguru.register.Register] - Register - 01: Navigate to 'Register' page
+[2023-11-23 15:42:51,199 INFO com.bankguru.register.Register] - Register - 02: Enter Valid Email to Email ID textbox
+[2023-11-23 15:42:51,285 INFO com.bankguru.register.Register] - Login - 01:  Navigate to 'Login' page
+[2023-11-23 15:43:36,246 INFO com.bankguru.register.Register] - Register - 01: Navigate to 'Register' page
+[2023-11-23 15:43:36,628 INFO com.bankguru.register.Register] - Register - 02: Enter Valid Email to Email ID textbox
+[2023-11-23 15:43:36,806 INFO com.bankguru.register.Register] - Register - 03: Click to submit button
+[2023-11-23 15:43:38,150 INFO com.bankguru.register.Register] - Register - 04: Check UserID and Password display and get value 
+[2023-11-23 15:43:38,383 INFO com.bankguru.register.Register] - Login - 01:  Navigate to 'Login' page
+[2023-11-23 15:43:38,881 INFO com.bankguru.register.Register] - Login - 02:  Enter to UserID textbox with value: mngr540233
+[2023-11-23 16:14:02,499 INFO com.bankguru.register.Register] - Register - 01: Navigate to 'Register' page
+[2023-11-23 16:14:02,908 INFO com.bankguru.register.Register] - Register - 02: Enter Valid Email to Email ID textbox
+[2023-11-23 16:14:03,059 INFO com.bankguru.register.Register] - Register - 03: Click to submit button
+[2023-11-23 16:14:04,534 INFO com.bankguru.register.Register] - Register - 04: Check UserID and Password display and get value 
+[2023-11-23 16:14:04,781 INFO com.bankguru.register.Register] - Login - 01:  Navigate to 'Login' page
+[2023-11-23 16:14:05,208 INFO com.bankguru.register.Register] - Login - 02:  Enter to UserID textbox with value: mngr540238
+[2023-11-23 16:15:16,381 INFO com.bankguru.register.Register] - Register - 01: Navigate to 'Register' page
+[2023-11-23 16:15:16,735 INFO com.bankguru.register.Register] - Register - 02: Enter Valid Email to Email ID textbox
+[2023-11-23 16:15:16,883 INFO com.bankguru.register.Register] - Register - 03: Click to submit button
+[2023-11-23 16:15:18,588 INFO com.bankguru.register.Register] - Register - 04: Check UserID and Password display and get value 
+[2023-11-23 16:15:18,809 INFO com.bankguru.register.Register] - Login - 01:  Navigate to 'Login' page
+[2023-11-23 16:15:21,405 INFO com.bankguru.register.Register] - Login - 02:  Enter to UserID textbox with value: mngr540239
+[2023-11-23 16:15:21,500 INFO com.bankguru.register.Register] - Login - 03:  Enter to Password textbox with value: AmEsetu
+[2023-11-23 16:15:21,584 INFO com.bankguru.register.Register] - Login - 04:  Click to Login button
+[2023-11-23 16:15:21,617 INFO com.bankguru.register.Register] - Login - 05:  Verify Manager's Page is displayed
+[2023-11-23 16:20:21,859 INFO com.bankguru.register.Register] - Register - 01: Navigate to 'Register' page
+[2023-11-23 16:20:22,207 INFO com.bankguru.register.Register] - Register - 02: Enter Valid Email to Email ID textbox
+[2023-11-23 16:20:22,351 INFO com.bankguru.register.Register] - Register - 03: Click to submit button
+[2023-11-23 16:20:23,287 INFO com.bankguru.register.Register] - Register - 04: Check UserID and Password display and get value 
+[2023-11-23 16:20:23,539 INFO com.bankguru.register.Register] - Login - 01:  Navigate to 'Login' page
+[2023-11-23 16:20:26,369 INFO com.bankguru.register.Register] - Login - 02:  Enter to UserID textbox with value: mngr540242
+[2023-11-23 16:20:26,472 INFO com.bankguru.register.Register] - Login - 03:  Enter to Password textbox with value: samEdad
+[2023-11-23 16:20:26,551 INFO com.bankguru.register.Register] - Login - 04:  Click to Login button
+[2023-11-23 16:20:26,586 INFO com.bankguru.register.Register] - Login - 05:  Verify Manager's Page is displayed
