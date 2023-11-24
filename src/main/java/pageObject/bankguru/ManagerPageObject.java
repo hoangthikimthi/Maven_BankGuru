@@ -3,6 +3,7 @@ package pageObject.bankguru;
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
+import pageUI.bankguru.ManagerPageUI;
 
 public class ManagerPageObject extends BasePage {
 	WebDriver driver;
@@ -12,9 +13,9 @@ public class ManagerPageObject extends BasePage {
 		this.driver = driver;
 	}
 
-	public void isWellcomeMessageDisplayed() {
-		// TODO Auto-generated method stub
-
+	public String wellcomeMessageIsDisplayed() {
+		waitForElementVisible(ManagerPageUI.WELCOME_MESSAGE);
+		return getElementText(ManagerPageUI.WELCOME_MESSAGE);
 	}
 
 }

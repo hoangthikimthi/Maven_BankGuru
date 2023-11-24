@@ -54,3 +54,110 @@
 [2023-11-23 16:20:26,472 INFO com.bankguru.register.Register] - Login - 03:  Enter to Password textbox with value: samEdad
 [2023-11-23 16:20:26,551 INFO com.bankguru.register.Register] - Login - 04:  Click to Login button
 [2023-11-23 16:20:26,586 INFO com.bankguru.register.Register] - Login - 05:  Verify Manager's Page is displayed
+[2023-11-24 09:36:46,986 INFO com.bankguru.register.Register] - Register - 01: Navigate to 'Register' page
+[2023-11-24 09:36:47,330 INFO com.bankguru.register.Register] - Register - 02: Enter Valid Email to Email ID textbox
+[2023-11-24 09:36:47,502 INFO com.bankguru.register.Register] - Register - 03: Click to submit button
+[2023-11-24 09:36:48,978 INFO com.bankguru.register.Register] - Register - 04: Check UserID and Password display and get value 
+[2023-11-24 09:36:49,260 INFO com.bankguru.register.Register] - Login - 01:  Navigate to 'Login' page
+[2023-11-24 09:36:50,851 INFO com.bankguru.register.Register] - Login - 02:  Enter to UserID textbox with value: mngr540340
+[2023-11-24 09:36:50,954 INFO com.bankguru.register.Register] - Login - 03:  Enter to Password textbox with value: UtAhata
+[2023-11-24 09:36:51,032 INFO com.bankguru.register.Register] - Login - 04:  Click to Login button
+[2023-11-24 09:36:51,064 INFO com.bankguru.register.Register] - Login - 05:  Verify Manager's Page is displayed
+[2023-11-24 09:37:27,899 INFO com.bankguru.register.Register] - Register - 01: Navigate to 'Register' page
+[2023-11-24 09:37:27,955 INFO com.bankguru.register.Register] - Register - 02: Enter Valid Email to Email ID textbox
+[2023-11-24 09:37:28,101 INFO com.bankguru.register.Register] - Register - 03: Click to submit button
+[2023-11-24 09:37:29,160 INFO com.bankguru.register.Register] - Register - 04: Check UserID and Password display and get value 
+[2023-11-24 09:37:29,373 INFO com.bankguru.register.Register] - Login - 01:  Navigate to 'Login' page
+[2023-11-24 09:37:32,184 INFO com.bankguru.register.Register] - Login - 02:  Enter to UserID textbox with value: mngr540341
+[2023-11-24 09:37:32,358 INFO com.bankguru.register.Register] - Login - 03:  Enter to Password textbox with value: yqahYhy
+[2023-11-24 09:37:32,491 INFO com.bankguru.register.Register] - Login - 04:  Click to Login button
+[2023-11-24 09:37:32,528 INFO com.bankguru.register.Register] - Login - 05:  Verify Manager's Page is displayed
+[2023-11-24 11:50:35,293 INFO com.bankguru.register.Register] - Register - 01: Navigate to 'Register' page
+[2023-11-24 11:50:35,520 INFO com.bankguru.register.Register] - Register - 02: Enter Valid Email to Email ID textbox
+[2023-11-24 11:50:35,751 INFO com.bankguru.register.Register] - Register - 03: Click to submit button
+[2023-11-24 11:50:36,701 INFO com.bankguru.register.Register] - Register - 04: Check UserID and Password display and get value 
+[2023-11-24 11:50:37,033 INFO com.bankguru.register.Register] - Login - 01:  Navigate to 'Login' page
+[2023-11-24 11:50:38,004 INFO com.bankguru.register.Register] - Login - 02:  Enter to UserID textbox with value: mngr540351
+[2023-11-24 11:50:38,211 INFO com.bankguru.register.Register] - Login - 03:  Enter to Password textbox with value: EnAvara
+[2023-11-24 11:50:38,366 INFO com.bankguru.register.Register] - Login - 04:  Click to Login button
+[2023-11-24 11:50:38,411 INFO com.bankguru.register.Register] - Login - 05:  Verify Manager's Page is displayed
+[2023-11-24 14:32:54,733 INFO com.bankguru.register.Register] - Register - 01: Navigate to 'Register' page
+[2023-11-24 14:32:55,082 INFO com.bankguru.register.Register] - Register - 02: Enter Valid Email to Email ID textbox
+[2023-11-24 14:32:55,306 INFO com.bankguru.register.Register] - Register - 03: Click to submit button
+[2023-11-24 14:33:09,946 INFO com.bankguru.register.Register] - Register - 04: Check UserID and Password display and get value 
+[2023-11-24 14:33:10,297 INFO com.bankguru.register.Register] - Login - 01:  Navigate to 'Login' page
+[2023-11-24 14:33:20,741 INFO com.bankguru.register.Register] - Login - 02:  Enter to UserID textbox with value: mngr540382
+[2023-11-24 14:33:20,927 INFO com.bankguru.register.Register] - Login - 03:  Enter to Password textbox with value: ubEjyjE
+[2023-11-24 14:33:21,097 INFO com.bankguru.register.Register] - Login - 04:  Click to Login button
+[2023-11-24 14:33:21,153 INFO com.bankguru.register.Register] - Login - 05:  Verify Manager's Page is displayed
+[2023-11-24 14:33:41,263 INFO com.bankguru.register.Register] - OS name = windows 11
+[2023-11-24 14:33:41,264 INFO com.bankguru.register.Register] - Driver instance name = chromedriver: chrome on windows (9f9018132c88b29bf4975d129cbb3bb3)
+[2023-11-24 14:38:12,754 INFO com.bankguru.register.Register] - Register - 01: Navigate to 'Register' page
+[2023-11-24 14:38:13,128 INFO com.bankguru.register.Register] - Register - 02: Enter Valid Email to Email ID textbox
+[2023-11-24 14:38:13,409 INFO com.bankguru.register.Register] - Register - 03: Click to submit button
+[2023-11-24 14:38:14,423 INFO com.bankguru.register.Register] - Register - 04: Check UserID and Password display and get value 
+[2023-11-24 14:38:14,923 INFO com.bankguru.register.Register] - Login - 01:  Navigate to 'Login' page
+[2023-11-24 14:38:19,116 INFO com.bankguru.register.Register] - Login - 02:  Enter to UserID textbox with value: mngr540383
+[2023-11-24 14:38:19,353 INFO com.bankguru.register.Register] - Login - 03:  Enter to Password textbox with value: jatuben
+[2023-11-24 14:38:19,480 INFO com.bankguru.register.Register] - Login - 04:  Click to Login button
+[2023-11-24 14:38:19,529 INFO com.bankguru.register.Register] - Login - 05:  Verify Manager's Page is displayed
+[2023-11-24 14:40:36,879 INFO com.bankguru.register.Register] - Register - 01: Navigate to 'Register' page
+[2023-11-24 14:40:37,213 INFO com.bankguru.register.Register] - Register - 02: Enter Valid Email to Email ID textbox
+[2023-11-24 14:40:37,480 INFO com.bankguru.register.Register] - Register - 03: Click to submit button
+[2023-11-24 14:40:38,566 INFO com.bankguru.register.Register] - Register - 04: Check UserID and Password display and get value 
+[2023-11-24 14:40:39,064 INFO com.bankguru.register.Register] - Login - 01:  Navigate to 'Login' page
+[2023-11-24 14:40:41,889 INFO com.bankguru.register.Register] - Login - 02:  Enter to UserID textbox with value: mngr540385
+[2023-11-24 14:40:42,310 INFO com.bankguru.register.Register] - Login - 03:  Enter to Password textbox with value: ruvuzyr
+[2023-11-24 14:40:42,593 INFO com.bankguru.register.Register] - Login - 04:  Click to Login button
+[2023-11-24 14:40:43,798 INFO com.bankguru.register.Register] - Login - 05:  Verify Manager's Page is displayed
+[2023-11-24 14:42:50,800 INFO com.bankguru.register.Register] - Register - 01: Navigate to 'Register' page
+[2023-11-24 14:42:51,146 INFO com.bankguru.register.Register] - Register - 02: Enter Valid Email to Email ID textbox
+[2023-11-24 14:42:51,355 INFO com.bankguru.register.Register] - Register - 03: Click to submit button
+[2023-11-24 14:42:52,214 INFO com.bankguru.register.Register] - Register - 04: Check UserID and Password display and get value 
+[2023-11-24 14:42:52,538 INFO com.bankguru.register.Register] - Login - 01:  Navigate to 'Login' page
+[2023-11-24 14:42:55,136 INFO com.bankguru.register.Register] - Login - 02:  Enter to UserID textbox with value: mngr540388
+[2023-11-24 14:42:55,331 INFO com.bankguru.register.Register] - Login - 03:  Enter to Password textbox with value: merybyv
+[2023-11-24 14:42:55,476 INFO com.bankguru.register.Register] - Login - 04:  Click to Login button
+[2023-11-24 14:42:56,881 INFO com.bankguru.register.Register] - Login - 05:  Verify Manager's Page is displayed
+[2023-11-24 14:47:20,934 INFO com.bankguru.register.Register] - Register - 01: Navigate to 'Register' page
+[2023-11-24 14:47:21,307 INFO com.bankguru.register.Register] - Register - 02: Enter Valid Email to Email ID textbox
+[2023-11-24 14:47:21,557 INFO com.bankguru.register.Register] - Register - 03: Click to submit button
+[2023-11-24 14:47:23,539 INFO com.bankguru.register.Register] - Register - 04: Check UserID and Password display and get value 
+[2023-11-24 14:47:23,921 INFO com.bankguru.register.Register] - Login - 01:  Navigate to 'Login' page
+[2023-11-24 14:47:29,710 INFO com.bankguru.register.Register] - Login - 02:  Enter to UserID textbox with value: mngr540392
+[2023-11-24 14:47:29,887 INFO com.bankguru.register.Register] - Login - 03:  Enter to Password textbox with value: byjahAt
+[2023-11-24 14:47:30,035 INFO com.bankguru.register.Register] - Login - 04:  Click to Login button
+[2023-11-24 14:47:31,587 INFO com.bankguru.register.Register] - Login - 05:  Verify Manager's Page is displayed
+[2023-11-24 14:48:32,536 INFO com.bankguru.register.Register] - Register - 01: Navigate to 'Register' page
+[2023-11-24 14:48:32,834 INFO com.bankguru.register.Register] - Register - 02: Enter Valid Email to Email ID textbox
+[2023-11-24 14:48:33,012 INFO com.bankguru.register.Register] - Register - 03: Click to submit button
+[2023-11-24 14:48:33,886 INFO com.bankguru.register.Register] - Register - 04: Check UserID and Password display and get value 
+[2023-11-24 14:48:34,129 INFO com.bankguru.register.Register] - Login - 01:  Navigate to 'Login' page
+[2023-11-24 14:48:36,850 INFO com.bankguru.register.Register] - Login - 02:  Enter to UserID textbox with value: mngr540393
+[2023-11-24 14:48:36,951 INFO com.bankguru.register.Register] - Login - 03:  Enter to Password textbox with value: ysagaze
+[2023-11-24 14:48:37,031 INFO com.bankguru.register.Register] - Login - 04:  Click to Login button
+[2023-11-24 14:48:38,103 INFO com.bankguru.register.Register] - Login - 05:  Verify Manager's Page is displayed
+[2023-11-24 14:50:17,606 INFO com.bankguru.register.Register] - Register - 01: Navigate to 'Register' page
+[2023-11-24 14:50:17,916 INFO com.bankguru.register.Register] - Register - 02: Enter Valid Email to Email ID textbox
+[2023-11-24 14:50:18,082 INFO com.bankguru.register.Register] - Register - 03: Click to submit button
+[2023-11-24 14:50:19,542 INFO com.bankguru.register.Register] - Register - 04: Check UserID and Password display and get value 
+[2023-11-24 14:50:19,769 INFO com.bankguru.register.Register] - Login - 01:  Navigate to 'Login' page
+[2023-11-24 14:50:22,183 INFO com.bankguru.register.Register] - Login - 02:  Enter to UserID textbox with value: mngr540394
+[2023-11-24 14:50:22,268 INFO com.bankguru.register.Register] - Login - 03:  Enter to Password textbox with value: UgurutE
+[2023-11-24 14:50:22,353 INFO com.bankguru.register.Register] - Login - 04:  Click to Login button
+[2023-11-24 14:50:23,441 INFO com.bankguru.register.Register] - Login - 05:  Verify Manager's Page is displayed
+[2023-11-24 14:50:53,496 INFO com.bankguru.register.Register] - OS name = windows 11
+[2023-11-24 14:50:53,496 INFO com.bankguru.register.Register] - Driver instance name = firefoxdriver: firefox on windows (afabff29-ce2a-4aa2-aa46-2be440142b8d)
+[2023-11-24 14:52:41,389 INFO com.bankguru.register.Register] - Register - 01: Navigate to 'Register' page
+[2023-11-24 14:52:41,782 INFO com.bankguru.register.Register] - Register - 02: Enter Valid Email to Email ID textbox
+[2023-11-24 14:52:41,936 INFO com.bankguru.register.Register] - Register - 03: Click to submit button
+[2023-11-24 14:52:43,862 INFO com.bankguru.register.Register] - Register - 04: Check UserID and Password display and get value 
+[2023-11-24 14:52:44,102 INFO com.bankguru.register.Register] - Login - 01:  Navigate to 'Login' page
+[2023-11-24 14:52:46,851 INFO com.bankguru.register.Register] - Login - 02:  Enter to UserID textbox with value: mngr540395
+[2023-11-24 14:52:46,954 INFO com.bankguru.register.Register] - Login - 03:  Enter to Password textbox with value: rEnYsat
+[2023-11-24 14:52:47,039 INFO com.bankguru.register.Register] - Login - 04:  Click to Login button
+[2023-11-24 14:52:49,040 INFO com.bankguru.register.Register] - Login - 05:  Verify Manager's Page is displayed
+[2023-11-24 14:52:49,117 INFO com.bankguru.register.Register] - OS name = windows 11
+[2023-11-24 14:52:49,117 INFO com.bankguru.register.Register] - Driver instance name = firefoxdriver: firefox on windows (d2529a15-d083-4920-86d2-dbb2bbada592)
+[2023-11-24 16:35:14,002 INFO com.bankguru.register.Register] - OS name = windows 11
+[2023-11-24 16:35:14,004 INFO com.bankguru.register.Register] - 

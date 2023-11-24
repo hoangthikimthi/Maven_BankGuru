@@ -33,9 +33,8 @@ public class BaseTest {
 		BasicConfigurator.configure();
 	}
 
-	// protected WebDriver getBrowserDriver(String browserName, String severName, String envName, String ipAddress, String portNumber, String osName, String
-	// osVersion) {
-	protected WebDriver getBrowserDriver(String browserName, String severName, String envName) {
+	protected WebDriver getBrowserDriver(String browserName, String severName, String envName, String ipAddress, String portNumber, String osName, String osVersion) {
+		// protected WebDriver getBrowserDriver(String browserName, String severName, String envName) {
 
 		switch (envName) {
 		case "local":

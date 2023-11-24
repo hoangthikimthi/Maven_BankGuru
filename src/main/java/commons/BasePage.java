@@ -20,6 +20,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import pageUI.bankguru.CommonPageUI;
+
 public class BasePage {
 
 	private WebDriver driver;
@@ -558,24 +560,42 @@ public class BasePage {
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByLocator(getDynamicXpath(locatorType, dynamicValue))));
 	}
 
-	// public BasePage openMyAccountPageByPageName(String pageName) {
-	// waitForElementClickable(BasePageNopCommerceUI.DYNAMIC_MY_ACCOUNT_LINK, pageName);
-	// clickToElement(BasePageNopCommerceUI.DYNAMIC_MY_ACCOUNT_LINK, pageName);
-	// switch (pageName) {
-	// case "Customer info":
-	// return PageGeneratorManager.getUserCustomerInfoPage(driver);
-	// case "Addresses":
-	// return PageGeneratorManager.getUserAddressPage(driver);
-	// case "My product reviews":
-	// return PageGeneratorManager.getUserMyProductReviewPage(driver);
-	// case "Reward points":
-	// return PageGeneratorManager.getUserRewardPointPage(driver);
-	// case "Change password":
-	// return PageGeneratorManager.getChangePasswordPage(driver);
-	// default:
-	// throw new RuntimeException("Invalid page name at My Account area.");
-	// }
-	// }
+	public BasePage openBankGuruByPageName(String pageName) {
+		waitForElementClickable(CommonPageUI.DYNAMIC_PAGE_IN_SIDEBAR, pageName);
+		clickToElement(CommonPageUI.DYNAMIC_PAGE_IN_SIDEBAR, pageName);
+		switch (pageName) {
+		case "Manager":
+			return PageGeneratorManager.getManagerPage(driver);
+		case "Edit Customer":
+			return PageGeneratorManager.getEditCustomerPage(driver);
+		case "Delete Customer":
+			return PageGeneratorManager.getDeleteCustomerPage(driver);
+		case "New Account":
+			return PageGeneratorManager.getNewAccountPage(driver);
+		case "Edit Account":
+			return PageGeneratorManager.getEditAccountPage(driver);
+		case "Delete Account":
+			return PageGeneratorManager.getDeleteAccountPage(driver);
+		case "Deposit":
+			return PageGeneratorManager.getDepositPage(driver);
+		case "Withdrawal":
+			return PageGeneratorManager.getWithfrawallPage(driver);
+		case "Fund Transfer":
+			return PageGeneratorManager.getFundTransferPage(driver);
+		case "Change Password":
+			return PageGeneratorManager.getChangePasswordPage(driver);
+		case "Balance Enquiry":
+			return PageGeneratorManager.getBalanceEnquiryPage(driver);
+		case "Mini Statement":
+			return PageGeneratorManager.getMiniStatementPage(driver);
+		case "Log out":
+			return PageGeneratorManager.getLogOutPageObject(driver);
+		case "Customised Statement":
+			return PageGeneratorManager.getCustomisedStatementPage(driver);
+		default:
+			throw new RuntimeException("Invalid page name at Side Bar area.");
+		}
+	}
 
 	// public BasePage clickToProductPicture(String indexNumber) {
 	// waitForElementClickable(UserProductDetailPageUI.DYNAMIC_PRODUCT_BY_INDEX, indexNumber);
