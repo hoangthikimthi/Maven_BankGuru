@@ -1,2 +1,7 @@
-[2023-11-24 16:35:14,002 INFO com.bankguru.register.Register] - OS name = windows 11
-[2023-11-24 16:35:14,004 INFO com.bankguru.register.Register] - 
+[2023-11-25 21:03:16,175 INFO com.bankguru.register.Register] - Register - 01: Navigate to 'Register' page
+[2023-11-25 21:03:16,879 INFO com.bankguru.register.Register] - Register - 02: Enter Valid Email to Email ID textbox
+[2023-11-25 21:03:17,444 INFO com.bankguru.register.Register] - Register - 03: Click to submit button
+[2023-11-25 21:03:18,814 INFO com.bankguru.register.Register] - Register - 04: Check UserID and Password display and get value 
+[2023-11-25 21:03:19,671 INFO com.bankguru.register.Register] - Login - 01:  Navigate to 'Login' page
+[2023-11-25 21:03:21,909 INFO com.bankguru.register.Register] - OS name = windows 10
+[2023-11-25 21:03:21,917 INFO com.bankguru.register.Register] - Driver instance name = chromedriver: chrome on windows (52971d4ed8e4a70b13ebfb46a9a5a15a)

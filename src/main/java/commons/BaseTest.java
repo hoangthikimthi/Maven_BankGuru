@@ -33,8 +33,8 @@ public class BaseTest {
 		BasicConfigurator.configure();
 	}
 
-	protected WebDriver getBrowserDriver(String browserName, String severName, String envName, String ipAddress, String portNumber, String osName, String osVersion) {
-		// protected WebDriver getBrowserDriver(String browserName, String severName, String envName) {
+	//protected WebDriver getBrowserDriver(String browserName, String severName, String envName, String ipAddress, String portNumber, String osName, String osVersion) {
+		protected WebDriver getBrowserDriver(String browserName, String severName, String envName) {
 
 		switch (envName) {
 		case "local":
@@ -57,7 +57,10 @@ public class BaseTest {
 		String envUrl = null;
 		Server server = Server.valueOf(serverName.toUpperCase());
 		switch (server) {
-		case DEV:
+		case lOGINDEV:
+			envUrl = "https://demo.guru99.com/v4/";
+			break;
+		case REGISTER_DEV:
 			envUrl = "https://demo.guru99.com/";
 			break;
 		case TEST:

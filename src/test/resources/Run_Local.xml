@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Local" parallel="false" thread-cout="">
 	<parameter name="envName" value="local" />
-	<parameter name="serverName" value="DEV" />
-
+	<parameter name="registerURL" value="REGISTER_DEV" />
+	<parameter name="loginURL" value="lOGINDEV" />
 
 	<!-- 	<test name="Run on firefox">
 		<parameter name="browserName" value="firefox" />
@@ -13,7 +13,7 @@
 
 
 	<test name="Run on CHROME">
-		<parameter name="browserName" value="firefox" />
+		<parameter name="browserName" value="chrome" />
 		<classes>
 			<class name="com.bankguru.register.Register" />
 			<class name="com.babkguru.newcustomer.Name_Address_City_Fields" />
