@@ -2,6 +2,7 @@ package pageObject.bankguru;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import commons.BasePage;
 import pageUI.bankguru.NewCustomerPageUI;
@@ -14,14 +15,13 @@ public class NewCustomerPageObject extends BasePage {
 		this.driver = driver;
 	}
 
-	public boolean isIframeDisplayed() {
-		waitForElementVisible(NewCustomerPageUI.IFRAME);
-		return isElementDisplayed(NewCustomerPageUI.IFRAME);
-	}
+	public void closeIframePopup() {
+		WebElement iframe = getWebElement(NewCustomerPageUI.IFRAME);
+		if (iframe.isDisplayed()) {
+			switchToFrameIframe(NewCustomerPageUI.IFRAME).close();
+			switchToDefaultContent();
+		}
 
-	public void closeIframe() {
-		switchToFrameIframe(NewCustomerPageUI.IFRAME).close();
-		switchToDefaultContent();
 	}
 
 	public boolean isCustomerPageDisplayed() {
@@ -36,7 +36,7 @@ public class NewCustomerPageObject extends BasePage {
 
 	public void enterTabKeyboard(String string) {
 		pressKeyToElement(NewCustomerPageUI.CUSTOMER_NAME_TEXTBOX, Keys.TAB);
-		
+
 	}
 
 	public boolean isErrorMessageNotBeBlankDisplayed() {

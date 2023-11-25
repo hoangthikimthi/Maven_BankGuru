@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import com.bankguru.register.Register;
 
 import commons.BaseTest;
+import commons.PageGeneratorManager;
 import pageObject.bankguru.LoginPageObject;
 import pageObject.bankguru.ManagerPageObject;
 import pageObject.bankguru.NewCustomerPageObject;
@@ -25,15 +26,16 @@ public class Name_Address_City_Fields extends BaseTest {
 
 	@Parameters({ "browserName", "loginURL", "envName" })
 	@BeforeClass
-	 public void beforeClass(String browserName, String loginURL, String envName) {
-	 driver = getBrowserDriver(browserName, loginURL, envName);
-//	public void beforeClass(@Optional("chrome") String browserName, @Optional("dev") String serverName, @Optional("local") String envName, @Optional("localhost") String ipAddress, @Optional("4444") String portNumber,
-//			@Optional("Windows") String osName, @Optional("10") String osVersion) {
-//		driver = getBrowserDriver(browserName, serverName, envName, ipAddress, portNumber, osName, osVersion);
-//
-//		// LOGIN
+	public void beforeClass(String browserName, String loginURL, String envName) {
+		driver = getBrowserDriver(browserName, loginURL, envName);
+		// public void beforeClass(@Optional("chrome") String browserName, @Optional("dev") String serverName, @Optional("local") String envName, @Optional("localhost")
+		// String ipAddress, @Optional("4444") String portNumber,
+		// @Optional("Windows") String osName, @Optional("10") String osVersion) {
+		// driver = getBrowserDriver(browserName, serverName, envName, ipAddress, portNumber, osName, osVersion);
+		//
+		// // LOGIN
 		log.info("Login - 01:  Navigate to 'Login' page");
-		loginPage = registerPage.openLoginPage();
+		loginPage = PageGeneratorManager.getLoginPage(driver);
 
 		log.info("Login - 02:  Enter to UserID textbox with value: " + Register.userID);
 		loginPage.inputUserIDTextbox(Register.userID);
@@ -52,28 +54,25 @@ public class Name_Address_City_Fields extends BaseTest {
 	public void TC_01_NameCanNotBeEmpty() {
 		log.info("TC_01_Step_01:  Click to 'New Customer' Page");
 		newCustomerPage = (NewCustomerPageObject) managerPage.openBankGuruByPageName("New Customer");
-		
+
 		log.info("TC_01_Step_02:  Close display iframe");
-		if (newCustomerPage.isIframeDisplayed()) {
-			newCustomerPage.closeIframe();
-		}		
+		newCustomerPage.closeIframePopup();
+
 		log.info("TC_01_Step_04:  Verify New Customer Page is displayed");
 		newCustomerPage.isCustomerPageDisplayed();
-		
+
 		log.info("TC_01_Step_05:  Click to Name textbox");
 		newCustomerPage.clickToNameTextbox();
-		
+
 		log.info("TC_01_Step_06:  Press TAB keyboard to move to the next Field");
 		newCustomerPage.enterTabKeyboard("TAB");
-		
+
 		log.info("TC_01_Step_07:  Verify message is shown 'Customer name must not be blank'");
 		Assert.assertTrue(newCustomerPage.isErrorMessageNotBeBlankDisplayed());
 	}
-	
-	
 
 	@AfterClass(alwaysRun = true)
 	public void afterClass() {
-		closeBrowserDriver();
+		// closeBrowserDriver();
 	}
 }

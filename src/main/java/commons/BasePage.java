@@ -592,6 +592,9 @@ public class BasePage {
 			return PageGeneratorManager.getLogOutPageObject(driver);
 		case "Customised Statement":
 			return PageGeneratorManager.getCustomisedStatementPage(driver);
+		case "New Customer":
+			return PageGeneratorManager.getNewCustomerPage(driver);
+
 		default:
 			throw new RuntimeException("Invalid page name at Side Bar area.");
 		}
