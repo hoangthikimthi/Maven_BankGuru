@@ -29,19 +29,66 @@ public class NewCustomerPageObject extends BasePage {
 		return isElementDisplayed(NewCustomerPageUI.ADD_NEW_CUSTOMER_TEXT);
 	}
 
-	public void clickToNameTextbox() {
-		waitForElementVisible(NewCustomerPageUI.CUSTOMER_NAME_TEXTBOX);
-		clickToElement(NewCustomerPageUI.CUSTOMER_NAME_TEXTBOX);
-	}
-
-	public void enterTabKeyboard(String string) {
-		pressKeyToElement(NewCustomerPageUI.CUSTOMER_NAME_TEXTBOX, Keys.TAB);
+	public void enterTabKeysOnCustomerNameTextbox(String textboxName, Keys key) {
+		waitForElementVisible(NewCustomerPageUI.DYNAMIC_TEXTBOX_NAME, textboxName);
+		pressKeyToElement(NewCustomerPageUI.DYNAMIC_TEXTBOX_NAME, key, textboxName);
 
 	}
 
-	public boolean isErrorMessageNotBeBlankDisplayed() {
-		waitForElementVisible(NewCustomerPageUI.BLANK_CUSTOMER_NAME_MESSAGE);
-		return isElementDisplayed(NewCustomerPageUI.BLANK_CUSTOMER_NAME_MESSAGE);
+	public String getMessageErrorOnCustomerNameTextbox(String textboxName) {
+		waitForElementVisible(NewCustomerPageUI.DYNAMIC_TEXTBOX_ERROR_MESSAGE, textboxName);
+		return getElementText(NewCustomerPageUI.DYNAMIC_TEXTBOX_ERROR_MESSAGE, textboxName);
+	}
+
+	public void inputToCustomerNameTextbox(String textboxName, String textValue) {
+		waitForElementClickable(NewCustomerPageUI.DYNAMIC_TEXTBOX_NAME, textboxName);
+		sendkeysToElement(NewCustomerPageUI.DYNAMIC_TEXTBOX_NAME, textValue, textboxName);
+
+	}
+
+	public void selectGenderRadioButton(String string) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void selectDateOfBirth(String string) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void inputToAddressTextbox(String string, String string2) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void inputToCityTextBox(String string, String string2) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void inputToStateTextbox(String string, String string2) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void inputToPINTextbox(String string, String string2) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void inputToMobileTextbox(String string, String string2) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void inputToEmailTextbox(String string, String string2) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void inputToPasswordTextbox(String string, String string2) {
+		// TODO Auto-generated method stub
+
 	}
 
 }

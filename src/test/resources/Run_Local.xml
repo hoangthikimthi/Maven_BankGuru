@@ -13,7 +13,7 @@
 
 
 	<test name="Run on CHROME">
-		<parameter name="browserName" value="chrome" />
+		<parameter name="browserName" value="firefox" />
 		<classes>
 			<class name="com.bankguru.register.Register" />
 			<class name="com.babkguru.newcustomer.Name_Address_City_Fields" />

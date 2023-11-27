@@ -16,4 +16,6 @@ public class GlobalConstants {
 	public static final String DOWNLOAD_FILE = PROJECT_PATH + File.separator + "downloadFiles";
 	public static final String BROW_STACK_URL = null;
 
+	public static final String Path_TestData = PROJECT_PATH + File.separator + "DataDriven";
+	public static final String File_TestData = "TestData.xls";
 }

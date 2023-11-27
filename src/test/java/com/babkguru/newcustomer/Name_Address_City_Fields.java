@@ -1,5 +1,8 @@
 package com.babkguru.newcustomer;
 
+import java.io.IOException;
+
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -11,11 +14,13 @@ import org.testng.annotations.Test;
 import com.bankguru.register.Register;
 
 import commons.BaseTest;
+import commons.GlobalConstants;
 import commons.PageGeneratorManager;
 import pageObject.bankguru.LoginPageObject;
 import pageObject.bankguru.ManagerPageObject;
 import pageObject.bankguru.NewCustomerPageObject;
 import pageObject.bankguru.RegisterPageObject;
+import utilities.ExcelUtils;
 
 public class Name_Address_City_Fields extends BaseTest {
 	WebDriver driver;
@@ -48,6 +53,7 @@ public class Name_Address_City_Fields extends BaseTest {
 
 		log.info("Login - 05:  Verify Manager's Page is displayed");
 		Assert.assertEquals(managerPage.wellcomeMessageIsDisplayed(), "Welcome To Manager's Page of Guru99 Bank");
+
 	}
 
 	@Test
@@ -55,20 +61,26 @@ public class Name_Address_City_Fields extends BaseTest {
 		log.info("TC_01_Step_01:  Click to 'New Customer' Page");
 		newCustomerPage = (NewCustomerPageObject) managerPage.openBankGuruByPageName("New Customer");
 
-		log.info("TC_01_Step_02:  Close display iframe");
-		newCustomerPage.closeIframePopup();
-
-		log.info("TC_01_Step_04:  Verify New Customer Page is displayed");
+		log.info("TC_01_Step_02:  Verify New Customer Page is displayed");
 		newCustomerPage.isCustomerPageDisplayed();
 
-		log.info("TC_01_Step_05:  Click to Name textbox");
-		newCustomerPage.clickToNameTextbox();
+		// log.info("TC_01_Step_03: Click to Name textbox");
+		// newCustomerPage.clickToNameTextbox();
 
-		log.info("TC_01_Step_06:  Press TAB keyboard to move to the next Field");
-		newCustomerPage.enterTabKeyboard("TAB");
+		log.info("TC_01_Step_04:  Press TAB keyboard to move to the next Field");
+		newCustomerPage.enterTabKeysOnCustomerNameTextbox("Customer Name", Keys.TAB);
 
-		log.info("TC_01_Step_07:  Verify message is shown 'Customer name must not be blank'");
-		Assert.assertTrue(newCustomerPage.isErrorMessageNotBeBlankDisplayed());
+		log.info("TC_01_Step_05:  Verify message is shown 'Customer name must not be blank'");
+		Assert.assertEquals(newCustomerPage.getMessageErrorOnCustomerNameTextbox("Customer Name"), "Customer name must not be blank");
+	}
+
+	@Test
+	public void TC_02_NameCanNotHaveSpecialCharacters() throws IOException {
+		log.info("TC_02_Step_01: Input secial character on Customer Name textbox");
+		newCustomerPage.inputToCustomerNameTextbox("Customer Name", "name!@#");
+
+		log.info("TC_02_Step_02: Verify message is shown 'Special characters are not allowed'");
+		Assert.assertEquals(newCustomerPage.getMessageErrorOnCustomerNameTextbox("Customer Name"), "Special characters are not allowed");
 	}
 
 	@AfterClass(alwaysRun = true)
