@@ -18,4 +18,9 @@ public class ManagerPageObject extends BasePage {
 		return getElementText(ManagerPageUI.WELCOME_MESSAGE);
 	}
 
+	public String getRegisterSuccessMessage() {
+		waitForElementVisible(ManagerPageUI.CUSTOMER_REGISTER_SUCCESS_MESSAGE);
+		return getElementText(ManagerPageUI.CUSTOMER_REGISTER_SUCCESS_MESSAGE);
+	}
+
 }

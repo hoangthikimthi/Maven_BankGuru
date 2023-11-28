@@ -26,15 +26,15 @@ public class Register extends BaseTest {
 
 	@Parameters({ "browserName", "registerURL", "envName" })
 	@BeforeClass
-//	public void beforeClass(@Optional("chrome") String browserName, @Optional("dev") String serverName, @Optional("local") String envName, @Optional("localhost") String ipAddress, @Optional("4444") String portNumber,
-//			@Optional("Windows") String osName, @Optional("10") String osVersion) {
-//		driver = getBrowserDriver(browserName, serverName, envName, ipAddress, portNumber, osName, osVersion);
-		 public void beforeClass(String browserName, String registerURL, String envName) {
-		 driver = getBrowserDriver(browserName, registerURL, envName);
+	// public void beforeClass(@Optional("chrome") String browserName, @Optional("dev") String serverName, @Optional("local") String envName, @Optional("localhost")
+	// String ipAddress, @Optional("4444") String portNumber,
+	// @Optional("Windows") String osName, @Optional("10") String osVersion) {
+	// driver = getBrowserDriver(browserName, serverName, envName, ipAddress, portNumber, osName, osVersion);
+	public void beforeClass(String browserName, String registerURL, String envName) {
+		driver = getBrowserDriver(browserName, registerURL, envName);
 
 		log.info("Register - 01: Navigate to 'Register' page");
 		registerPage = PageGeneratorManager.getRegisterPage(driver);
-		dataFaker = new DataFaker();
 		emailID = dataFaker.getEmail();
 
 	}
@@ -51,7 +51,7 @@ public class Register extends BaseTest {
 		log.info("Register - 04: Check UserID and Password display and get value ");
 		userID = registerPage.checkDisplayAndGetUserIDGenerator();
 		password = registerPage.checkDisplayAndGetPasswordGenerator();
-		
+
 		log.info("Login - 01:  Navigate to 'Login' page");
 		loginPage = registerPage.openLoginPage();
 	}

@@ -40,55 +40,26 @@ public class NewCustomerPageObject extends BasePage {
 		return getElementText(NewCustomerPageUI.DYNAMIC_TEXTBOX_ERROR_MESSAGE, textboxName);
 	}
 
-	public void inputToCustomerNameTextbox(String textboxName, String textValue) {
+	public void inputToTextboxByName(String textboxName, String textValue) {
 		waitForElementClickable(NewCustomerPageUI.DYNAMIC_TEXTBOX_NAME, textboxName);
 		sendkeysToElement(NewCustomerPageUI.DYNAMIC_TEXTBOX_NAME, textValue, textboxName);
 
 	}
 
-	public void selectGenderRadioButton(String string) {
-		// TODO Auto-generated method stub
+	public void selectGenderMaleRadioButton() {
+		waitForElementClickable(NewCustomerPageUI.MALE_GENDER);
+		clickToElement(NewCustomerPageUI.MALE_GENDER);
 
 	}
 
-	public void selectDateOfBirth(String string) {
-		// TODO Auto-generated method stub
-
+	public void inputDateOfBirth(String date) {
+		waitForElementClickable(NewCustomerPageUI.DATEOFBIRTH);
+		sendkeysToElement(NewCustomerPageUI.DATEOFBIRTH, date);
 	}
 
-	public void inputToAddressTextbox(String string, String string2) {
-		// TODO Auto-generated method stub
+	public ManagerPageObject clickToSubmitButton() {
 
-	}
-
-	public void inputToCityTextBox(String string, String string2) {
-		// TODO Auto-generated method stub
-
-	}
-
-	public void inputToStateTextbox(String string, String string2) {
-		// TODO Auto-generated method stub
-
-	}
-
-	public void inputToPINTextbox(String string, String string2) {
-		// TODO Auto-generated method stub
-
-	}
-
-	public void inputToMobileTextbox(String string, String string2) {
-		// TODO Auto-generated method stub
-
-	}
-
-	public void inputToEmailTextbox(String string, String string2) {
-		// TODO Auto-generated method stub
-
-	}
-
-	public void inputToPasswordTextbox(String string, String string2) {
-		// TODO Auto-generated method stub
-
+		return null;
 	}
 
 }

@@ -77,7 +77,7 @@ public class Name_Address_City_Fields extends BaseTest {
 	@Test
 	public void TC_02_NameCanNotHaveSpecialCharacters() throws IOException {
 		log.info("TC_02_Step_01: Input secial character on Customer Name textbox");
-		newCustomerPage.inputToCustomerNameTextbox("Customer Name", "name!@#");
+		newCustomerPage.inputToTextboxByName("Customer Name", "name!@#");
 
 		log.info("TC_02_Step_02: Verify message is shown 'Special characters are not allowed'");
 		Assert.assertEquals(newCustomerPage.getMessageErrorOnCustomerNameTextbox("Customer Name"), "Special characters are not allowed");

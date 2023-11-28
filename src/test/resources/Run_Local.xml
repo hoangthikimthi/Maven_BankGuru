@@ -16,7 +16,7 @@
 		<parameter name="browserName" value="firefox" />
 		<classes>
 			<class name="com.bankguru.register.Register" />
-			<class name="com.babkguru.newcustomer.Name_Address_City_Fields" />
+			<class name="com.bankguru.payment.Payment" />
 		</classes>
 	</test>
 

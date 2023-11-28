@@ -15,6 +15,7 @@ import pageObject.bankguru.LoginPageObject;
 import pageObject.bankguru.ManagerPageObject;
 import pageObject.bankguru.NewCustomerPageObject;
 import pageObject.bankguru.RegisterPageObject;
+import utilities.DataFaker;
 
 public class Payment extends BaseTest {
 	WebDriver driver;
@@ -22,6 +23,8 @@ public class Payment extends BaseTest {
 	LoginPageObject loginPage;
 	ManagerPageObject managerPage;
 	NewCustomerPageObject newCustomerPage;
+	String customerName, dateOfBirth, address, city, state, mobile, emailCustomer;
+	int pin;
 
 	@Parameters({ "browserName", "loginURL", "envName" })
 	@BeforeClass
@@ -33,6 +36,14 @@ public class Payment extends BaseTest {
 		// driver = getBrowserDriver(browserName, serverName, envName, ipAddress, portNumber, osName, osVersion);
 		//
 		// // LOGIN
+		customerName = DataFaker.getFirstName() + DataFaker.getLastName();
+		dateOfBirth = "01/01/1989";
+		address = DataFaker.getEmail();
+		city = DataFaker.getCity();
+		emailCustomer = DataFaker.getEmail();
+		state = DataFaker.getState();
+		pin = DataFaker.getPIN();
+		mobile = DataFaker.getPhoneNumber();
 		log.info("Login - 01:  Navigate to 'Login' page");
 		loginPage = PageGeneratorManager.getLoginPage(driver);
 
@@ -56,34 +67,41 @@ public class Payment extends BaseTest {
 		newCustomerPage = (NewCustomerPageObject) managerPage.openBankGuruByPageName("New Customer");
 
 		log.info("TC_01_Step_02:  Fill in Customer Name textbox");
-		newCustomerPage.inputToCustomerNameTextbox("Customer Name", "AUTOMATION TESTING");
+		newCustomerPage.inputToTextboxByName("Customer Name", "AUTOMATION TESTING");
 
 		log.info("TC_01_Step_03:  Fill in Gender Radio Button");
-		newCustomerPage.selectGenderRadioButton("male");
+		newCustomerPage.selectGenderMaleRadioButton();
 
 		log.info("TC_01_Step_04:  Fill in Date Of birth");
-		newCustomerPage.selectDateOfBirth("01/01/1989");
+		newCustomerPage.inputDateOfBirth(dateOfBirth);
 
 		log.info("TC_01_Step_05:  Fill in Address");
-		newCustomerPage.inputToAddressTextbox("Address", "PO Box 911 8331 Duis Avenue");
+		newCustomerPage.inputToTextboxByName("Address", address);
 
 		log.info("TC_01_Step_06:  Fill in City");
-		newCustomerPage.inputToCityTextBox("City", "Tampa");
+		newCustomerPage.inputToTextboxByName("City", city);
 
-		log.info("TC_01_Step_06:  Fill in State");
-		newCustomerPage.inputToStateTextbox("State", "FL");
+		log.info("TC_01_Step_07:  Fill in State");
+		newCustomerPage.inputToTextboxByName("State", state);
 
-		log.info("TC_01_Step_06:  Fill in PIN");
-		newCustomerPage.inputToPINTextbox("PIN", "466250");
+		log.info("TC_01_Step_08:  Fill in PIN");
+		newCustomerPage.inputToTextboxByName("PIN", String.valueOf(pin));
 
-		log.info("TC_01_Step_06:  Fill in Mobile");
-		newCustomerPage.inputToMobileTextbox("Mobile Number", "4555442476");
+		log.info("TC_01_Step_09:  Fill in Mobile");
+		newCustomerPage.inputToTextboxByName("Mobile Number", mobile);
 
-		log.info("TC_01_Step_06:  Fill in Email");
-		newCustomerPage.inputToEmailTextbox("E-mail", "automation@gmail.com");
+		log.info("TC_01_Step_10:  Fill in Email");
+		newCustomerPage.inputToTextboxByName("E-mail", emailCustomer);
 
-		log.info("TC_01_Step_06:  Fill in Password");
-		newCustomerPage.inputToPasswordTextbox("Password", "123456");
+		log.info("TC_01_Step_11:  Fill in Password");
+		newCustomerPage.inputToTextboxByName("Password", Register.password);
+
+		log.info("TC_01_Step_12:  Click Submit button");
+		managerPage = newCustomerPage.clickToSubmitButton();
+
+		log.info("TC_01_Step_13:  Verify add new customer successfully");
+		Assert.assertEquals(managerPage.getRegisterSuccessMessage(), "Customer Registered Successfully!!!");
+
 	}
 
 	@AfterClass(alwaysRun = true)
