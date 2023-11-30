@@ -13,6 +13,7 @@ import commons.BaseTest;
 import commons.PageGeneratorManager;
 import pageObject.bankguru.LoginPageObject;
 import pageObject.bankguru.ManagerPageObject;
+import pageObject.bankguru.NewAccountPageObject;
 import pageObject.bankguru.NewCustomerPageObject;
 import pageObject.bankguru.RegisterPageObject;
 import utilities.DataFaker;
@@ -23,7 +24,8 @@ public class Payment extends BaseTest {
 	LoginPageObject loginPage;
 	ManagerPageObject managerPage;
 	NewCustomerPageObject newCustomerPage;
-	String customerName, dateOfBirth, address, city, state, mobile, emailCustomer;
+	NewAccountPageObject newAccountPage;
+	String customerName, dateOfBirth, address, city, state, mobile, emailCustomer, customerID, accountType, initialDeposit, accountID;
 	int pin;
 
 	@Parameters({ "browserName", "loginURL", "envName" })
@@ -38,12 +40,14 @@ public class Payment extends BaseTest {
 		// // LOGIN
 		customerName = DataFaker.getFirstName() + DataFaker.getLastName();
 		dateOfBirth = "01/01/1989";
-		address = DataFaker.getEmail();
+		address = DataFaker.getCity();
 		city = DataFaker.getCity();
 		emailCustomer = DataFaker.getEmail();
 		state = DataFaker.getState();
 		pin = DataFaker.getPIN();
-		mobile = DataFaker.getPhoneNumber();
+		mobile = "0383371930";
+		accountType = "Savings";
+		initialDeposit = "50000";
 		log.info("Login - 01:  Navigate to 'Login' page");
 		loginPage = PageGeneratorManager.getLoginPage(driver);
 
@@ -67,7 +71,7 @@ public class Payment extends BaseTest {
 		newCustomerPage = (NewCustomerPageObject) managerPage.openBankGuruByPageName("New Customer");
 
 		log.info("TC_01_Step_02:  Fill in Customer Name textbox");
-		newCustomerPage.inputToTextboxByName("Customer Name", "AUTOMATION TESTING");
+		newCustomerPage.inputToTextboxByName("Customer Name", customerName);
 
 		log.info("TC_01_Step_03:  Fill in Gender Radio Button");
 		newCustomerPage.selectGenderMaleRadioButton();
@@ -76,7 +80,7 @@ public class Payment extends BaseTest {
 		newCustomerPage.inputDateOfBirth(dateOfBirth);
 
 		log.info("TC_01_Step_05:  Fill in Address");
-		newCustomerPage.inputToTextboxByName("Address", address);
+		newCustomerPage.inputToAreaByName("Address", address);
 
 		log.info("TC_01_Step_06:  Fill in City");
 		newCustomerPage.inputToTextboxByName("City", city);
@@ -102,6 +106,38 @@ public class Payment extends BaseTest {
 		log.info("TC_01_Step_13:  Verify add new customer successfully");
 		Assert.assertEquals(managerPage.getRegisterSuccessMessage(), "Customer Registered Successfully!!!");
 
+		log.info("TC_01_Step_14:  Verify customer info after register successfully");
+		Assert.assertFalse(managerPage.getInfoCustomerInValue("Customer ID").isBlank());
+		customerID = managerPage.getInfoCustomerInValue("Customer ID");
+		Assert.assertEquals(managerPage.getInfoCustomerInValue("Customer Name"), customerName);
+		Assert.assertEquals(managerPage.getInfoCustomerInValue("Gender"), "male");
+		Assert.assertEquals(managerPage.getInfoCustomerInValue("Birthdate"), "1989-01-01");
+		Assert.assertEquals(managerPage.getInfoCustomerInValue("Address"), address);
+		Assert.assertEquals(managerPage.getInfoCustomerInValue("City"), city);
+		Assert.assertEquals(managerPage.getInfoCustomerInValue("State"), state);
+		Assert.assertEquals(managerPage.getInfoCustomerInValue("Pin"), String.valueOf(pin));
+		Assert.assertEquals(managerPage.getInfoCustomerInValue("Mobile No."), mobile);
+		Assert.assertEquals(managerPage.getInfoCustomerInValue("Email"), emailCustomer);
+
+	}
+
+	public void TC_02_AddNewAccount() {
+		newAccountPage = (NewAccountPageObject) managerPage.openBankGuruByPageName("New Account");
+		newAccountPage.inputToCustomerID(customerID);
+		newAccountPage.selectAccoutType(accountType);
+		newAccountPage.inputToInitialDeposit(initialDeposit);
+		managerPage = newAccountPage.clickToSubmitButton();
+
+		Assert.assertEquals(managerPage.getAccountGeneratedSuccessMessage(), "Account Generated Successfully!!!");
+		Assert.assertFalse(managerPage.getInfoAccountInValue("Customer ID").isEmpty());
+		accountID = managerPage.getInfoCustomerInValue("Customer ID");
+		Assert.assertEquals(managerPage.getInfoAccountInValue("Customer ID"), customerID);
+		Assert.assertEquals(managerPage.getInfoAccountInValue("Customer Name"), customerName);
+		Assert.assertEquals(managerPage.getInfoAccountInValue("Email"), emailCustomer);
+		Assert.assertEquals(managerPage.getInfoAccountInValue("Address"), address);
+		Assert.assertEquals(managerPage.getInfoAccountInValue("Account Type"), accountType);
+		Assert.assertEquals(managerPage.getInfoAccountInValue("Date of Opening"), getCurrentDay());
+		Assert.assertEquals(managerPage.getInfoAccountInValue("Current Amount"), initialDeposit);
 	}
 
 	@AfterClass(alwaysRun = true)

@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import commons.BasePage;
+import commons.PageGeneratorManager;
 import pageUI.bankguru.NewCustomerPageUI;
 
 public class NewCustomerPageObject extends BasePage {
@@ -53,13 +54,30 @@ public class NewCustomerPageObject extends BasePage {
 	}
 
 	public void inputDateOfBirth(String date) {
-		waitForElementClickable(NewCustomerPageUI.DATEOFBIRTH);
-		sendkeysToElement(NewCustomerPageUI.DATEOFBIRTH, date);
+		waitForElementClickable(NewCustomerPageUI.DATE_OF_BIRTH);
+		removeAttributeInDOM(NewCustomerPageUI.DATE_OF_BIRTH, "type");
+		sendkeysToElement(NewCustomerPageUI.DATE_OF_BIRTH, date);
 	}
 
 	public ManagerPageObject clickToSubmitButton() {
+		waitForElementClickable(NewCustomerPageUI.SUBMIT_BUTTON);
+		clickToElement(NewCustomerPageUI.SUBMIT_BUTTON);
+		return PageGeneratorManager.getManagerPage(driver);
+	}
 
-		return null;
+	public void inputToAreaByName(String textAreaName, String address) {
+		waitForElementClickable(NewCustomerPageUI.DYNAMIC_TEXTAREA_NAME, textAreaName);
+		sendkeysToElement(NewCustomerPageUI.DYNAMIC_TEXTAREA_NAME, address, textAreaName);
+
+	}
+
+	public void turnOffPopup() {
+		if (isElementDisplayed(NewCustomerPageUI.POPUP)) {
+			switchToFrameIframe(NewCustomerPageUI.POPUP);
+			clickToElement(NewCustomerPageUI.CLOSE_POPUP_BUTTON);
+			switchToDefaultContent();
+		}
+
 	}
 
 }

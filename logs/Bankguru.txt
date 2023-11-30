@@ -1,7 +1,6 @@
-[2023-11-27 16:29:41,874 INFO com.bankguru.register.Register] - Register - 01: Navigate to 'Register' page
-[2023-11-27 16:29:42,306 INFO com.bankguru.register.Register] - Register - 02: Enter Valid Email to Email ID textbox
-[2023-11-27 16:29:42,456 INFO com.bankguru.register.Register] - Register - 03: Click to submit button
-[2023-11-27 16:29:43,274 INFO com.bankguru.register.Register] - Register - 04: Check UserID and Password display and get value 
-[2023-11-27 16:29:43,430 INFO com.bankguru.register.Register] - Login - 01:  Navigate to 'Login' page
-[2023-11-27 16:29:44,818 INFO com.bankguru.register.Register] - OS name = windows 11
-[2023-11-27 16:29:44,818 INFO com.bankguru.register.Register] - Driver instance name = firefoxdriver: firefox on windows (73f2e881-8181-4a05-a255-07fd87c88b4b)
+[2023-11-30 11:14:42,835 INFO com.bankguru.register.Register] - Register - 01: Navigate to 'Register' page
+[2023-11-30 11:14:43,308 INFO com.bankguru.register.Register] - Register - 02: Enter Valid Email to Email ID textbox
+[2023-11-30 11:14:43,509 INFO com.bankguru.register.Register] - Register - 03: Click to submit button
+[2023-11-30 11:14:44,287 INFO com.bankguru.register.Register] - Register - 04: Check UserID and Password display and get value 
+[2023-11-30 11:14:44,554 INFO com.bankguru.register.Register] - OS name = windows 11
+[2023-11-30 11:14:44,554 INFO com.bankguru.register.Register] - Driver instance name = chromedriver: chrome on windows (230ce6a3912171522481be672b1342fa)

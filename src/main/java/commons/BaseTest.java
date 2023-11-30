@@ -65,7 +65,7 @@ public class BaseTest {
 			envUrl = "https://demo.guru99.com/";
 			break;
 		case TEST:
-			envUrl = "";
+			envUrl = "DEMOQA_URL";
 			break;
 		default:
 			throw new RuntimeException("");
@@ -221,7 +221,7 @@ public class BaseTest {
 	}
 
 	protected String getCurrentDay() {
-		return getCurrentDate() + "/" + getCurrentMonth() + "/" + getCurrentYear();
+		return getCurrentYear() + "-" + getCurrentMonth() + "-" + getCurrentDate();
 	}
 
 }

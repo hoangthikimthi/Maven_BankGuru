@@ -442,10 +442,14 @@ public class BasePage {
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
 		jsExecutor.executeScript("arguments[0].scrollIntoView(true);", getListElement(locator));
 	}
+	//
+	// public void removeAttributeInDOM(String locator, String attributeRemove) {
+	// JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+	// jsExecutor.executeScript("arguments[0].removeAttribute('" + attributeRemove + "');", getListElement(locator));
+	// }
 
 	public void removeAttributeInDOM(String locator, String attributeRemove) {
-		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-		jsExecutor.executeScript("arguments[0].removeAttribute('" + attributeRemove + "');", getListElement(locator));
+		((JavascriptExecutor) driver).executeScript("arguments[0].removeAttribute('" + attributeRemove + "');", getWebElement(locator));
 	}
 
 	public boolean areJQueryAndJSLoadedSuccess() {

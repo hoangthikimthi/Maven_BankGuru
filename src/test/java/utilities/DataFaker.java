@@ -39,15 +39,11 @@ public class DataFaker {
 	}
 
 	public static String getMobile() {
-		return faker.phoneNumber().phoneNumber();
+		return faker.phoneNumber().cellPhone();
 	}
 
 	public static String getEmail() {
 		return faker.internet().emailAddress();
-	}
-
-	public static String getPhoneNumber() {
-		return faker.phoneNumber().phoneNumber();
 	}
 
 	public static String getPassword() {

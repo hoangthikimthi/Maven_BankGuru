@@ -2,7 +2,7 @@
 <suite name="Local" parallel="false" thread-cout="">
 	<parameter name="envName" value="local" />
 	<parameter name="registerURL" value="REGISTER_DEV" />
-	<parameter name="loginURL" value="LOGIN_DEV" />
+	<parameter name="loginURL" value="TEST" />
 
 	<!-- 	<test name="Run on firefox">
 		<parameter name="browserName" value="firefox" />
@@ -15,8 +15,7 @@
 	<test name="Run on CHROME">
 		<parameter name="browserName" value="chrome" />
 		<classes>
-			<class name="com.bankguru.register.Register" />
-			<class name="com.bankguru.payment.Payment" />
+			<class name="utilities.RegisterStudentTest" />
 		</classes>
 	</test>
 

@@ -6,6 +6,8 @@ public class GlobalConstants {
 	public static final String REGISTER_PAGE_URL = "https://demo.guru99.com/";
 	public static final String lOGIN_PAGE_URL = "https://demo.guru99.com/v4/";
 
+	public static final String DEMOQA_URL = "https://demoqa.com/automation-practice-form";
+
 	public static final String PROJECT_PATH = System.getProperty("user.dir");
 	public static final String OS_NAME = System.getProperty("os.name");
 

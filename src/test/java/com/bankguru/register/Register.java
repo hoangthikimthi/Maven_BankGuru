@@ -52,8 +52,6 @@ public class Register extends BaseTest {
 		userID = registerPage.checkDisplayAndGetUserIDGenerator();
 		password = registerPage.checkDisplayAndGetPasswordGenerator();
 
-		log.info("Login - 01:  Navigate to 'Login' page");
-		loginPage = registerPage.openLoginPage();
 	}
 
 	// @Test
