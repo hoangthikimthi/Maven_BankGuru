@@ -19,8 +19,16 @@ import pageObject.bankguru.NewAccountPageObject;
 import pageObject.bankguru.NewCustomerPageObject;
 import pageObject.bankguru.RegisterPageObject;
 import pageObject.bankguru.WithfrawallPageObject;
+import pageObject.nopcommerce.user.UserHomePageObject;
+import pageObject.nopcommerce.user.UserLoginPageObject;
+import pageObject.nopcommerce.user.UserRegisterPageObject;
+import pageObject.nopcommerce.user.UserSearchPageObject;
 
 public class PageGeneratorManager {
+	
+	public static UserHomePageObject getUserHomePage(WebDriver driver) {
+		return new UserHomePageObject(driver);
+	}
 
 	public static RegisterPageObject getRegisterPage(WebDriver driver) {
 		return new RegisterPageObject(driver);
@@ -88,5 +96,17 @@ public class PageGeneratorManager {
 
 	public static WithfrawallPageObject getWithfrawallPage(WebDriver driver) {
 		return new WithfrawallPageObject(driver);
+	}
+
+	public static UserRegisterPageObject getUserRegisterPage(WebDriver driver) {
+		return new UserRegisterPageObject(driver);
+	}
+
+	public static UserLoginPageObject getUserLoginPage(WebDriver driver) {
+		return new UserLoginPageObject(driver);
+	}
+	
+	public static UserSearchPageObject getUserSearchPage(WebDriver driver) {
+		return new UserSearchPageObject(driver);
 	}
 }

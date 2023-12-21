@@ -5,7 +5,7 @@ import java.io.File;
 public class GlobalConstants {
 	public static final String REGISTER_PAGE_URL = "https://demo.guru99.com/";
 	public static final String lOGIN_PAGE_URL = "https://demo.guru99.com/v4/";
-
+	public static final String NOPCOMMERCE_USER_URL = "https://demo.nopcommerce.com/";
 	public static final String DEMOQA_URL = "https://demoqa.com/automation-practice-form";
 
 	public static final String PROJECT_PATH = System.getProperty("user.dir");

@@ -195,7 +195,7 @@
 				<configuration>
 					<!-- Run TestNG xml file -->
 					<suiteXmlFiles>
-						<suiteXmlFile>src/test/resources/Run_Local.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/Nopcommerce.xml</suiteXmlFile>
 					</suiteXmlFiles>
 
 					<!-- Argument -->

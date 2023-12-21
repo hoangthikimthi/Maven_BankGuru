@@ -65,7 +65,7 @@ public class BaseTest {
 			envUrl = "https://demo.guru99.com/";
 			break;
 		case TEST:
-			envUrl = "DEMOQA_URL";
+			envUrl = GlobalConstants.NOPCOMMERCE_USER_URL;
 			break;
 		default:
 			throw new RuntimeException("");
