@@ -18,7 +18,7 @@ public class SearchAdvance extends BaseTest {
 	UserHomePageObject homePage;
 	UserLoginPageObject loginPage;
 	UserSearchPageObject searchPage;
-	String relativeData, absoluteData;
+	String relativeData, absoluteData, macbookpro;
 
 	@Parameters({ "browser", "serverName", "envName" })
 	@BeforeClass
@@ -37,7 +37,7 @@ public class SearchAdvance extends BaseTest {
 		
 		relativeData = "Lenovo";
 		absoluteData = "Apple MacBook Pro 13-inch";
-
+		macbookpro = "Apple MacBook Pro";
 	}
 
 	@Test
@@ -60,15 +60,64 @@ public class SearchAdvance extends BaseTest {
 	public void TC_03_SearchWithRelativeData() {
 		searchPage.inputToSearchTextbox(relativeData);
 		searchPage.clickToSearchButton();
-		Assert.assertTrue(searchPage.isResultShowCorrectly(relativeData,2));
+		Assert.assertEquals(searchPage.numberOfProductTitle(), 2);
+		Assert.assertTrue(searchPage.isProductTitleContainSearchKey(relativeData));
+		
+		
 	}
 	
 	@Test
 	public void TC_04_SearchWithAbsoluteData() {
 		searchPage.inputToSearchTextbox(absoluteData);
 		searchPage.clickToSearchButton();
-		Assert.assertTrue(searchPage.isResultShowCorrectly(absoluteData,1));
+		Assert.assertEquals(searchPage.numberOfProductTitle(), 1);
+		Assert.assertTrue(searchPage.isProductTitleContainSearchKey(absoluteData));
 	}
+	
+	@Test
+	public void TC_05_SearchWithParentCategory() {
+		searchPage.inputToSearchTextbox(macbookpro);
+		searchPage.checkAdvancedSearchCheckbox();
+		searchPage.selectCategory("Computers");
+		searchPage.uncheckSearchSubCategories();
+		searchPage.clickToSearchButton();
+		Assert.assertEquals(searchPage.getNoProductMessage(), "No products were found that matched your criteria.");
+	}
+	
+	@Test
+	public void TC_06_SearchWithSubCategory() {
+		searchPage.inputToSearchTextbox(macbookpro);
+		searchPage.checkAdvancedSearchCheckbox();
+		searchPage.selectCategory("Computers");
+		searchPage.checkSearchSubCategories();
+		searchPage.clickToSearchButton();
+		Assert.assertEquals(searchPage.numberOfProductTitle(), 1);
+		Assert.assertTrue(searchPage.isProductTitleContainSearchKey(macbookpro));
+	}
+	
+	@Test
+	public void TC_07_SearchWithIncorrectManufacturer() {
+		searchPage.inputToSearchTextbox(macbookpro);
+		searchPage.checkAdvancedSearchCheckbox();
+		searchPage.selectCategory("Computers");
+		searchPage.checkSearchSubCategories();
+		searchPage.selectManufacturer("HP");
+		searchPage.clickToSearchButton();
+		Assert.assertEquals(searchPage.getNoProductMessage(), "No products were found that matched your criteria.");
+	}
+	
+	@Test
+	public void TC_08_SearchWithCorrectManufacturer() {
+		searchPage.inputToSearchTextbox(macbookpro);
+		searchPage.checkAdvancedSearchCheckbox();
+		searchPage.selectCategory("Computers");
+		searchPage.checkSearchSubCategories();
+		searchPage.selectManufacturer("Apple");
+		searchPage.clickToSearchButton();
+		Assert.assertEquals(searchPage.numberOfProductTitle(), 1);
+		Assert.assertTrue(searchPage.isProductTitleContainSearchKey(macbookpro));
+		}
+	
 	@AfterClass
 	public void AfterClass() {
 		driver.quit();

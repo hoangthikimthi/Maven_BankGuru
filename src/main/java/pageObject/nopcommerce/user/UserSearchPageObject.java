@@ -43,7 +43,7 @@ public class UserSearchPageObject extends BasePage {
 		return getElementText(SearchPageUI.NO_PRODUCT_MESSAGE);
 	}
 
-	public boolean isResultShowCorrectly(String searchKey, int numberProduct) {
+	public boolean isProductTitleContainSearchKey(String searchKey) {
 		ArrayList<String> producTitles = new ArrayList<>();
 		waitForAllElementVisible(SearchPageUI.PRODUCT_TITLE);
 		List<WebElement> elements = getListElement(SearchPageUI.PRODUCT_TITLE);
@@ -57,11 +57,41 @@ public class UserSearchPageObject extends BasePage {
 			} else {
 				return containSearchKey = true;
 			}
-		}
-		if (producTitles.size() == numberProduct & containSearchKey == true) {
-			return true;
-		} else {
-			return false;
-		}
+		} 
+		return containSearchKey;
+	
+	}
+
+	public void checkAdvancedSearchCheckbox() {
+		waitForElementVisible(SearchPageUI.ADVANCE_SEARCH_CHECKBOX);
+		checktoDefaulCheckboxOrRadio(SearchPageUI.ADVANCE_SEARCH_CHECKBOX);
+	}
+
+	public void selectCategory(String value) {
+		waitForElementVisible(SearchPageUI.CATEGORY_DROPDOWN);
+		selectItemInDefautDropdown(SearchPageUI.CATEGORY_DROPDOWN, value);
+	}
+
+	public void uncheckSearchSubCategories() {
+		waitForElementVisible(SearchPageUI.SEARCH_SUB_CATEGORIES_CHECKBOX);
+		unChecktoDefaulCheckboxRadio(SearchPageUI.SEARCH_SUB_CATEGORIES_CHECKBOX);
+	}
+
+	public void checkSearchSubCategories() {
+		waitForElementVisible(SearchPageUI.SEARCH_SUB_CATEGORIES_CHECKBOX);
+		checktoDefaulCheckboxOrRadio(SearchPageUI.SEARCH_SUB_CATEGORIES_CHECKBOX);
+
+		
+	}
+
+	public void selectManufacturer(String value) {
+		waitForElementVisible(SearchPageUI.MANUFACTURER_DROPDOWN);
+		selectItemInDefautDropdown(SearchPageUI.MANUFACTURER_DROPDOWN, value);
+
+	}
+
+	public int numberOfProductTitle() {
+		waitForElementVisible(SearchPageUI.PRODUCT_TITLE);
+		return getElementSize(SearchPageUI.PRODUCT_TITLE);
 	}
 }
