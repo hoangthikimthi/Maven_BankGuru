@@ -9,7 +9,8 @@
 		<classes>
 			<parameter name="browser" value="CHROME" />
 			<class name="com.nopcommerce.Common_Register" />
-			<class name="com.nopcommerce.SearchAdvance" />
+			<class name="com.nopcommerce.Sort_Display_Paging" />
+			<!--<class name="com.nopcommerce.SearchAdvance" /> -->
 		</classes>
 	</test>
 

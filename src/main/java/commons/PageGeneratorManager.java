@@ -19,6 +19,7 @@ import pageObject.bankguru.NewAccountPageObject;
 import pageObject.bankguru.NewCustomerPageObject;
 import pageObject.bankguru.RegisterPageObject;
 import pageObject.bankguru.WithfrawallPageObject;
+import pageObject.nopcommerce.user.NoteBookPageObject;
 import pageObject.nopcommerce.user.UserHomePageObject;
 import pageObject.nopcommerce.user.UserLoginPageObject;
 import pageObject.nopcommerce.user.UserRegisterPageObject;
@@ -108,5 +109,8 @@ public class PageGeneratorManager {
 	
 	public static UserSearchPageObject getUserSearchPage(WebDriver driver) {
 		return new UserSearchPageObject(driver);
+	}
+	public static NoteBookPageObject getNoteBookPage(WebDriver driver) {
+		return new NoteBookPageObject(driver);
 	}
 }

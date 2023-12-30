@@ -41,4 +41,11 @@ public class UserHomePageObject extends BasePage {
 		return PageGeneratorManager.getUserSearchPage(driver);
 	}
 
+	public NoteBookPageObject clickToNoteBookLink() {
+		waitForElementVisible(HomePageUI.COMPUTER_LINK);
+		hoverMouseToElement(HomePageUI.COMPUTER_LINK);
+		clickToElement(HomePageUI.NOTEBOOK_LINK);
+		return PageGeneratorManager.getNoteBookPage(driver);
+	}
+
 }

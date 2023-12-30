@@ -118,8 +118,8 @@ public class SearchAdvance extends BaseTest {
 		Assert.assertTrue(searchPage.isProductTitleContainSearchKey(macbookpro));
 		}
 	
-	@AfterClass
+	@AfterClass(alwaysRun = true)
 	public void AfterClass() {
-		driver.quit();
+		closeBrowserDriver();
 	}
 }

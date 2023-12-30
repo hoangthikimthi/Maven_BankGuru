@@ -32,7 +32,7 @@ public class BasePage {
 
 	// Get(Url)-openPageUrl
 	public void openPageUrl(String pageURL) {
-		driver.get(pageURL);
+		driver.get(pageURL);		
 	}
 
 	public String getPageTitle() {
@@ -253,9 +253,9 @@ public class BasePage {
 		select.selectByVisibleText(textValue);
 	}
 
-	public void getSelectedItemInDefaultDropdown(String locatorType, String textValue) {
+	public String getSelectedItemInDefaultDropdown(String locatorType) {
 		Select select = new Select(getWebElement(locatorType));
-		select.getFirstSelectedOption().getText();
+		return select.getFirstSelectedOption().getText();
 	}
 
 	public boolean isDropdownMultiple(String locatorType) {

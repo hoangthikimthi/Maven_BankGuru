@@ -5,7 +5,9 @@ import java.util.Random;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -31,7 +33,9 @@ public class Common_Register extends BaseTest {
 		lastName = "Hoang";
 		emailAddress = "afc" + generateFakeNumber() + "@mail.vn";
 		password = "12345a";
-
+	}
+	@Test
+	public void Register() {
 		log.info("Register - Steps 01: Navigate to 'Register' page");
 		homePage.openRegisterPage();
 		registerPage = homePage.openRegisterPage();
@@ -58,10 +62,6 @@ public class Common_Register extends BaseTest {
 		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
 
 	}
-	@Test
-	public void TC_01() {
-		
-	}
 
 	public int generateFakeNumber() {
 		Random ran = new Random();
@@ -69,9 +69,9 @@ public class Common_Register extends BaseTest {
 
 	}
 
-	@AfterClass
+	@AfterClass (alwaysRun = true)
 	public void closedriver() {
-		driver.quit();
+	closeBrowserDriver();
 	}
 
 }
